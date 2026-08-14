@@ -537,6 +537,12 @@
   .fc-item:first-child{padding-left:0;}
   .fc-item:not(:first-child){border-left:1px solid rgba(16,22,15,0.22);}
   .fc-item:hover{text-decoration:underline;text-underline-offset:3px;}
+  /* 좁은 화면: 가로 3개가 들쭉날쭉 줄바꿈되므로 세로 1열로 쌓고 구분선을 위쪽 경계로 옮긴다 */
+  @media (max-width:900px){
+    .foot-compliance .wrap{flex-direction:column;align-items:stretch;padding-top:0.5rem;padding-bottom:0.5rem;}
+    .fc-item{padding:0.9rem 0;text-align:left;}
+    .fc-item:not(:first-child){border-left:0;border-top:1px solid rgba(16,22,15,0.22);}
+  }
 
   /* 컴플라이언스 모달 */
   .fc-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:1.5rem;}
