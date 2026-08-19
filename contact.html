@@ -428,11 +428,6 @@
             <label for="email">이메일</label>
             <input type="email" id="email" name="email">
           </div>
-          <div class="field">
-            <label for="subject">제목 <span class="req">(필수)</span></label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-
           <fieldset style="border:none;margin:0;padding:0;">
             <legend style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">문의 유형</legend>
             <div class="radio-grid">
@@ -959,7 +954,6 @@
         name:    v('name'),
         email:   v('email'),
         phone:   v('phone'),
-        subject: v('subject'),
         topic:   topic ? topic.value : '',
         message: v('message'),
         agree:   document.getElementById('agree').checked,
